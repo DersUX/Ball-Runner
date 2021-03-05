@@ -1,22 +1,29 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AttackIndicator
+    - BonusBorderMover
+    - BonusSpawner
+    - BorderBonus
     - BorderMover
+    - BorderSpawner
     - CameraMover
+    - ComebackBonus
+    - ComebackButton
     - DeathZone
     - DeletionZone
     - Enemy
     - FloatingJoystick
     - GameOver
-    - GateMover
+    - Health
+    - JumpBonus
     - PauseButton
     - PlatformMover
     - PlayButton
     - Player
-    - RecordScore
+    - PlayerMover
     - Score
     - SoundButton
-    - Spawner
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Ludiq.PeekCore.Runtime.dll:
@@ -30,11 +37,15 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -94,47 +105,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1790}
+      Script: {instanceID: 1792}
     - Class: 114
-      Script: {instanceID: 1826}
+      Script: {instanceID: 1828}
     - Class: 114
-      Script: {instanceID: 1878}
+      Script: {instanceID: 1880}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 2016}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2488}
     - Class: 114
-      Script: {instanceID: 2558}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2674}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2802}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 2920}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3380}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 3310}
     - Class: 114
-      Script: {instanceID: 4242}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 3512}
     - Class: 114
-      Script: {instanceID: 4968}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 5152}
+      Script: {instanceID: 4250}
+    - Class: 114
+      Script: {instanceID: 4350}
+    - Class: 114
+      Script: {instanceID: 4592}
+    - Class: 114
+      Script: {instanceID: 4978}
+    - Class: 114
+      Script: {instanceID: 5386}
+    - Class: 114
+      Script: {instanceID: 19004}
+    - Class: 114
+      Script: {instanceID: 24822}
+    - Class: 114
+      Script: {instanceID: 28748}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,33 +210,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1878}
+      Script: {instanceID: 1880}
     - Class: 114
-      Script: {instanceID: 2194}
+      Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 2242}
+      Script: {instanceID: 2244}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2674}
     - Class: 114
-      Script: {instanceID: 2852}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 2912}
+      Script: {instanceID: 2920}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3380}
+      Script: {instanceID: 3388}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3512}
     - Class: 114
-      Script: {instanceID: 3928}
+      Script: {instanceID: 3936}
     - Class: 114
-      Script: {instanceID: 4656}
+      Script: {instanceID: 4666}
     - Class: 114
-      Script: {instanceID: 4786}
+      Script: {instanceID: 4796}
     - Class: 114
-      Script: {instanceID: 5130}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5490}
+      Script: {instanceID: 5502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,7 +340,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 689be5b6d626ebb2d7add7caeecf9327
+      Hash: 14eba3b0c26465dd532027d1a1b56662
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOver
@@ -411,16 +436,22 @@ ScriptsOnlyBuild:
     className: PlatformMover
   - hash:
       serializedVersion: 2
+      Hash: 5b540ec8eaecce8ef0ad1b39e7c06090
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AttackIndicator
+  - hash:
+      serializedVersion: 2
       Hash: b3321bacf09f366d0e32d6d672f04ea3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BorderMover
   - hash:
       serializedVersion: 2
-      Hash: f9179e48fa38fa910810599ff2baa5d8
+      Hash: a42c1290e71715180f139629eca1b37b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Spawner
+    className: BorderSpawner
   - hash:
       serializedVersion: 2
       Hash: 5bb0c23ac2810973880e592724a69354
@@ -447,6 +478,12 @@ ScriptsOnlyBuild:
     className: TextMeshSpawner
   - hash:
       serializedVersion: 2
+      Hash: 86e0ae2dd90c2847c48739410d670f0c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMover
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -463,6 +500,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 262941f2f44a7a95b6f2ddf4418187df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BonusBorderMover
   - hash:
       serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
@@ -525,6 +568,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: c264dc27ec2f0d964fd36b584924539d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BorderBonus
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -549,16 +598,10 @@ ScriptsOnlyBuild:
     className: PauseButton
   - hash:
       serializedVersion: 2
-      Hash: 41f418ff8e38536e0e7bae88b5277e05
+      Hash: ac396285ba12fd10e01b8c992908a10d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: 49d164a5c4cf03ceb6afb5e81f7e0152
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GateMover
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -615,7 +658,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: ebb4742f5c5fa09c336bace9ddc38867
+      Hash: 0088391be93dbcee331afc03a9f713b7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -819,6 +862,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: ea6a7e55f3ff6f536b652fb8efcf6098
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BonusSpawner
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -921,12 +970,6 @@ ScriptsOnlyBuild:
     className: VertexColorCycler
   - hash:
       serializedVersion: 2
-      Hash: 079b70a1f75e59fbaec542ba8328de00
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RecordScore
-  - hash:
-      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -955,6 +998,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: VertexZoom
+  - hash:
+      serializedVersion: 2
+      Hash: 1cf0e03f93dfcb68e727264827da7982
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JumpBonus
   - hash:
       serializedVersion: 2
       Hash: 11319334e5365797f8056694f9b5dae4
@@ -1009,8 +1058,26 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComebackBonus
+  - hash:
+      serializedVersion: 2
+      Hash: 9239e5b6c53d7a316b13b38be76897be
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComebackButton
+  - hash:
+      serializedVersion: 2
+      Hash: 5aafe7a3d526ea8f85b05fba854a2149
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Soft/Unity/First-Game-Ball/FootBALL Escape v0.3.apk
+  playerPath: C:/Soft/Unity/First-Game-Ball/BALL RUNNER 1.3.2.apk

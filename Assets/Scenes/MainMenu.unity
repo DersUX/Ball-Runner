@@ -245,7 +245,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 507106551}
         m_TargetAssemblyTypeName: SoundButton, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: OnSoundButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -667,7 +667,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 507106550}
         m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: OnPlayButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -7,7 +7,7 @@ public class PauseButton : MonoBehaviour
 
     private bool _gamePause = false;
 
-    public void OnClickButton()
+    public void OnPauseButtonClick()
     {
         _gamePause = !_gamePause;
         Time.timeScale = Convert.ToInt32(!_gamePause);

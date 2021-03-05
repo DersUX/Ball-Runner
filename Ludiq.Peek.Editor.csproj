@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5EE38B09-60D5-229C-6DEE-D9BED8816F35}</ProjectGuid>
+    <ProjectGuid>{0B5DD927-B656-6586-AD1E-E39A02CF8867}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Ludiq.Peek.Editor</AssemblyName>
@@ -787,11 +787,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Ludiq.PeekCore.Editor.csproj">
-      <Project>{67F9B195-407A-49A5-39E7-2B5A470AEB3C}</Project>
+      <Project>{B204C4A0-F92B-7FF6-A045-030FA6951FFD}</Project>
       <Name>Ludiq.PeekCore.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Ludiq.PeekCore.Runtime.csproj">
-      <Project>{365B3FDA-587E-9581-2279-C30C227312A4}</Project>
+      <Project>{9D37FD77-E439-54B3-317E-15C5E29C67DD}</Project>
       <Name>Ludiq.PeekCore.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

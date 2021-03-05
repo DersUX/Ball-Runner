@@ -1,35 +1,42 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Player _target;
+    [SerializeField] private Player _player;
     [SerializeField] private Vector3 _kickDirection;
     [SerializeField] private float _moveSpeed = 5;
     [SerializeField] private float _kickDistance = 0.2f;
-    [SerializeField] private float _maxDistance = 10;
+    [SerializeField] private float _maxDistance = 15;
 
     private Animator _animator;
 
+    private Vector3 _startPosition;
+    private bool _playerMoving = false;
     private float _currentDistance;
-    private bool _gameStarted = false;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        _target.StartingMove += OnTargetStartingMove;
+
+        _player.StartingMove += OnPlayerStartingMove;
+        _player.Dying += OnPlayerDying;
+
+        _startPosition = transform.position;
     }
 
     private void OnDisable()
     {
-        _target.StartingMove -= OnTargetStartingMove;
+        _player.StartingMove -= OnPlayerStartingMove;
+        _player.Dying -= OnPlayerDying;
     }
 
     private void Update()
     {
-        if (_gameStarted)
+        if (_playerMoving)
         {
-            _currentDistance = Vector3.Distance(transform.position, _target.transform.position);
+            _currentDistance = Vector3.Distance(transform.position, _player.transform.position);
 
             if (_maxDistance < _currentDistance)
                 Move(_moveSpeed * 10);
@@ -43,7 +50,7 @@ public class Enemy : MonoBehaviour
 
     private void Move(float speed)
     {
-        Vector3 currentPosition = new Vector3(_target.transform.position.x, transform.position.y, _target.transform.position.z);
+        Vector3 currentPosition = new Vector3(_player.transform.position.x, transform.position.y, _player.transform.position.z);
 
         transform.position = Vector3.MoveTowards(transform.position, currentPosition, speed * Time.deltaTime);
     }
@@ -55,11 +62,17 @@ public class Enemy : MonoBehaviour
         Vector3 currentKickDirection = _kickDirection;
         currentKickDirection.x = Random.Range(-_kickDirection.x, _kickDirection.x);
 
-        _target.GetComponent<Rigidbody>().AddForce(currentKickDirection);
+        _player.GetComponent<Rigidbody>().AddForce(currentKickDirection);
     }
 
-    private void OnTargetStartingMove()
+    private void OnPlayerStartingMove()
     {
-        _gameStarted = true;
+        _playerMoving = true;
+    }
+
+    private void OnPlayerDying()
+    {
+        _playerMoving = false;
+        transform.position = _startPosition;
     }
 }

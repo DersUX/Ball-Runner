@@ -9,11 +9,11 @@ public class SoundButton : MonoBehaviour
     [SerializeField] private Sprite _imageOff;
 
     private Image _image;
-    private bool _soundOn;
+    private bool _soundEnable;
 
     private void Awake()
     {
-        _soundOn = Convert.ToBoolean(PlayerPrefs.GetInt("Sound", 1));
+        _soundEnable = Convert.ToBoolean(PlayerPrefs.GetInt("Sound", 1));
     }
 
     private void Start()
@@ -22,17 +22,17 @@ public class SoundButton : MonoBehaviour
         SwitchImage();
     }
 
-    public void OnButtonClick()
+    public void OnSoundButtonClick()
     {
-        _soundOn = !_soundOn;
-        PlayerPrefs.SetInt("Sound", Convert.ToInt32(_soundOn));
+        _soundEnable = !_soundEnable;
+        PlayerPrefs.SetInt("Sound", Convert.ToInt32(_soundEnable));
 
         SwitchImage();
     }
     
     private void SwitchImage()
     {
-        if (!_soundOn)
+        if (!_soundEnable)
             _image.sprite = _imageOff;
         else
             _image.sprite = _imageOn;
